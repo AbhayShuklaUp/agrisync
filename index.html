@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8f4" />
+    <meta
+      name="description"
+      content="AgriSync is a demo dashboard for connected, climate-smart food systems."
+    />
+    <title>AgriSync — Food systems, in sync</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#" aria-label="AgriSync home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <path d="M20 34V17" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+              <path d="M20 23C11.6 23 7 18.7 7 11c8.5 0 13 4.1 13 12Z" fill="currentColor" />
+              <path d="M20 18C20 10.8 24.3 6 33 6c0 8.7-4.8 13-13 13" fill="currentColor" opacity=".66" />
+              <path d="M12 34h16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" />
+            </svg>
+          </span>
+          <span class="brand-name">agrisync<span>.</span></span>
+        </a>
+
+        <div class="workspace-label">WORKSPACE</div>
+        <nav class="nav-list">
+          <button class="nav-item active" data-page="overview" aria-label="Overview">
+            <span class="nav-icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6"/></svg></span>
+            <span>Overview</span>
+          </button>
+          <button class="nav-item" data-page="farms" aria-label="Sense">
+            <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 20.5h18M5 20V11l7-5 7 5v9M9 20v-5h6v5M3.5 10.5 12 4l8.5 6.5"/></svg></span>
+            <span>Sense</span><span class="nav-count">12</span>
+          </button>
+          <button class="nav-item" data-page="decide" aria-label="Decide">
+            <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5h16M6.5 16l3-4 3 2 5-7"/><circle cx="6.5" cy="16" r="1"/><circle cx="9.5" cy="12" r="1"/><circle cx="12.5" cy="14" r="1"/><circle cx="17.5" cy="7" r="1"/></svg></span>
+            <span>Decide</span>
+          </button>
+          <button class="nav-item" data-page="logistics" aria-label="Act">
+            <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M3 6.5h11v11H3zM14 10h4l3 3.5v4h-7M7 19.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18 19.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"/></svg></span>
+            <span>Act</span><span class="nav-badge">3</span>
+          </button>
+          <button class="nav-item" data-page="policy" aria-label="Policy">
+            <span class="nav-icon"><svg viewBox="0 0 24 24"><path d="M12 3.5 20 7v5.5c0 4.4-3.3 7.2-8 8.5-4.7-1.3-8-4.1-8-8.5V7l8-3.5Z"/><path d="m8.5 12 2.2 2.2 4.8-5"/></svg></span>
+            <span>Policy</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-bottom">
+          <div class="season-card">
+            <div class="season-icon">✳</div>
+            <div>
+              <strong>Kharif season</strong>
+              <span>Season progress</span>
+            </div>
+            <span class="season-arrow">↗</span>
+            <div class="season-progress"><span></span></div>
+            <div class="season-meta"><span>Week 8 of 16</span><span>50%</span></div>
+          </div>
+          <button class="profile-button">
+            <span class="avatar">AS</span>
+            <span class="profile-copy"><strong>AgriSync Demo</strong><small>Workspace admin</small></span>
+            <span class="profile-menu">•••</span>
+          </button>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Workspace</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Overview</strong></div>
+          <div class="topbar-right">
+            <label class="district-select-label" for="district-select"><span>District</span>
+              <select id="district-select" aria-label="Pilot district">
+                <option>Nashik</option>
+                <option>Anantapur</option>
+                <option>Mandya</option>
+                <option>Wayanad</option>
+              </select>
+            </label>
+            <span class="demo-pill"><span></span> DEMO ENVIRONMENT</span>
+            <button class="icon-button notification-button" aria-label="Notifications">
+              <svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><i></i>
+            </button>
+            <span class="top-avatar">AS</span>
+          </div>
+        </header>
+
+        <section class="page-content" id="page-content" aria-live="polite"></section>
+        <footer class="footer-note"><span class="footer-leaf">✳</span> Growing a better food system, together. <span class="footer-right">AgriSync prototype · Sample data</span></footer>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
