@@ -2,7 +2,14 @@
 
 **Intelligent food systems for sustainable production and distribution.**
 
-AgriSync is a hackathon prototype based on the [AgriSync pitch](https://github.com/AbhayShuklaUp/agrisync). It brings the pitch's four-layer model—**Sense, Decide, Act, Govern**—into a single, responsive dashboard for a sample food-supply network.
+AgriSync is a hackathon prototype inspired by the AgriSync pitch deck. It connects sample farm, produce, logistics, and policy views through a four-layer model:
+
+| Layer | Prototype capability |
+| --- | --- |
+| **Sense** | Inspect demo plot moisture, crop, sensor status, and indicative yield across pilot districts |
+| **Decide** | Explore rainfall, nitrogen, and irrigation inputs with a transparent sample yield formula |
+| **Act** | Simulate a lot dispatch and an irrigation scheduling action |
+| **Govern** | Explore illustrative scheme prompts, compliance checklist items, carbon estimates, and a lot trail |
 
 > **Honest scope:** This is a front-end pilot model, not a live agricultural service. Farm, sensor, yield, shipment, policy, carbon, and impact values are scenario data. There is no connected IoT hardware, satellite feed, trained AI model, carrier, government-policy feed, persistent database, or blockchain. The yield calculation is an explainable toy formula, subsidy prompts are not official eligibility decisions, and the lot trail is a stand-in record. Do not use these examples as agronomic, financial, or regulatory advice.
 
